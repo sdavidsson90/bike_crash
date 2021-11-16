@@ -12,8 +12,7 @@ options(scipen = 999)
 
 ##########################
 # Indlæsning af data 
-setwd("~/Documents/ARKIV/R/Projects/bike_crash")
-bike_crash <- vroom("bike_crash.csv") 
+bike_crash <- vroom("raw_data/bike_crash.csv") 
 colnames(bike_crash) <- janitor::make_clean_names(colnames(bike_crash))
 
 # https://opendata-townofchapelhill.hub.arcgis.com/datasets/NCDOT::bicycle-crashes-2007-to-2019/explore?location=35.130408%2C-79.817750%2C7.48
