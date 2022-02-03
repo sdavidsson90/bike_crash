@@ -7,7 +7,6 @@ pacman::p_load(tidyverse,
 
 ##########################
 
-
 # Read in data
 bike_crash <- read_csv("~/R/Projects/bike_crash/raw_data/bike_crash.csv")
 
@@ -98,9 +97,12 @@ bike_crash <- bike_crash %>% mutate(rd_conditio = if_else(rd_conditio == "Dry", 
 # Does the road have defects?
 bike_crash <- bike_crash %>% mutate(rd_defects = if_else(rd_defects == "None", "No", "Yes")) 
 
+# Let's drop these as we don't know their meaning. 
+bike_crash <- bike_crash %>% select(!c(starts_with("num_bics"), objectid))
+
+
 # - - - - - - 
 
 # Export final dataset
 write_rds(bike_crash, file = "processed_data/bike_crash.rds")
-
 
