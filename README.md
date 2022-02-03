@@ -1,6 +1,6 @@
 # bike_crash
 
-This is a data analytics project on bike crashes (with cars) in Chapel Hill, North Carolina. Data was recorded between 2007-2019.
+This is a data analytics project on bike crashes (with cars) in North Carolina. Data was recorded between 2007-2019.
 
 [1] Original source is:
 Description: Bicyclist and pedestrian crashes that occurred in North Carolina between years 2007 through 2019
